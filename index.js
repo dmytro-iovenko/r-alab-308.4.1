@@ -5,8 +5,8 @@ const csv =
 let num_columns;
 
 const rows = csv.split("\n");
-num_columns = rows[0].split(",");
-
+num_columns = rows[0].split(",").length;
+console.log(num_columns)
 // console.log(rows);
 // for (let row of rows) {
 //   let cell1, cell2, cell3, cell4;
