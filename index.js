@@ -88,3 +88,12 @@ console.log(csvObjArr);
 let anotherNewObj = { id: "7", name: "Bilbo", occupation: "None", age: "111" };
 csvObjArr.push(anotherNewObj);
 console.log(csvObjArr);
+
+// Use the values of each object within the array and the array’s length property 
+// to calculate the average age of the group.
+// This calculation should be accomplished using a loop.
+let totalCount = csvObjArr.length, totalAge = 0;
+csvObjArr.forEach(obj => totalAge+=Number(obj.age));
+// console.log(totalAge); // 254
+let avgAge = Math.round(totalAge / totalCount)
+console.log(avgAge); // 51
