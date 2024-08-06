@@ -97,3 +97,26 @@ csvObjArr.forEach(obj => totalAge+=Number(obj.age));
 // console.log(totalAge); // 254
 let avgAge = Math.round(totalAge / totalCount)
 console.log(avgAge); // 51
+
+//// Part 5: Full Circle
+// transform the final set of data back into CSV format.
+let newHeader = [], newCsvArr = [];
+// loop through first object to create a new header;
+for (let el in csvObjArr[0]) {
+    newHeader.push(el);
+}
+newCsvArr.push(newHeader.join(","))
+// console.log(newCsvArr)
+
+// loop through array and collect data from each object in order of headers;
+for (let obj of csvObjArr) {
+    const newRowArr = [];
+    newHeader.forEach(header => newRowArr.push(obj[header]))
+    newCsvArr.push(newRowArr.join(","))
+}
+// console.log(newCsvArr)
+
+// join new array to csv string. 
+// escape '\n' to see it in the result string
+let newCsv = newCsvArr.join("\\n")
+console.log(newCsv) //id,name,occupation,age\n42,Bruce,Knight,41\n48,Barry,Runner,25\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n7,Bilbo,None,111
