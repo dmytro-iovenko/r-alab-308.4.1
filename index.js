@@ -76,3 +76,9 @@ console.log(csvObjArr);
 let lastElement = csvObjArr.pop();
 console.log(lastElement);
 console.log(csvObjArr);
+
+//2. Insert the following object at index 1:
+//{ id: "48", name: "Barry", occupation: "Runner", age: "25" }
+let newObj = { id: "48", name: "Barry", occupation: "Runner", age: "25" };
+csvObjArr.splice(1, 0, newObj);
+console.log(csvObjArr);
