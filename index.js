@@ -82,3 +82,9 @@ console.log(csvObjArr);
 let newObj = { id: "48", name: "Barry", occupation: "Runner", age: "25" };
 csvObjArr.splice(1, 0, newObj);
 console.log(csvObjArr);
+
+//3. Add the following object to the end of the array:
+//{ id: "7", name: "Bilbo", occupation: "None", age: "111" }
+let anotherNewObj = { id: "7", name: "Bilbo", occupation: "None", age: "111" };
+csvObjArr.push(anotherNewObj);
+console.log(csvObjArr);
