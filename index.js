@@ -15,11 +15,8 @@ console.log(num_columns);
 // Each row should be stored in a parent array, with the heading row located at index 0.
 // Cache this two-dimensional array in a variable for later use.
 const csvArr = []
-for (let row of rows) {
-    csvArr.push(row.split(","))
-}
-console.log(csvArr)
-
+rows.forEach(row=>csvArr.push(row.split(",")))
+console.log(csvArr);
 
 
 // console.log(rows);
